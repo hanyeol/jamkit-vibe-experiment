@@ -1,0 +1,124 @@
+import themes.sbss
+
+/* Main Container */
+/catalog/layer {
+    width: 1pw;
+    height: 1ph;
+    background-color: #000000;
+}
+
+/* Header Container */
+/catalog/layer/header/layer {
+    width: 1pw;
+    height: 60;
+    position: absolute;
+    top: 0;
+    left: 0;
+    direction: hori;
+    align: center;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+/* Close Button */
+/catalog/layer/header/layer/button#btn_close {
+    width: 60;
+    height: 60;
+    font-size: 24;
+    color: #FFFFFF;
+    text-align: center;
+}
+
+/* Header Title */
+/catalog/layer/header/layer/label {
+    width: 1pw - 120;
+    height: 60;
+    color: #FFFFFF;
+    font-size: 18;
+    font-weight: bold;
+    text-align: center;
+}
+
+/* Next Button */
+/catalog/layer/header/layer/button#btn_next {
+    width: 60;
+    height: 60;
+    font-size: 16;
+    color: #FF0050;
+    font-weight: bold;
+    text-align: center;
+}
+
+/* Content Container */
+/catalog/layer/content/layer {
+    width: 1pw;
+    height: 1ph;
+}
+
+/* Camera View */
+/catalog/layer/content/layer/camera_view {
+    width: 1pw;
+    height: 1ph;
+    content-mode: aspect-fill;
+}
+
+/* Options Container */
+/catalog/layer/content/layer/options/layer {
+    width: 1pw - 40;
+    height: 60;
+    position: absolute;
+    right: 20;
+    top: 100;
+    direction: vert;
+}
+
+/* Option Button */
+/catalog/layer/content/layer/options/layer/button {
+    width: 50;
+    height: 50;
+    margin-bottom: 15;
+    font-size: 24;
+    background-color: rgba(0, 0, 0, 0.3);
+    border-radius: 25;
+    color: #FFFFFF;
+}
+
+/* Record Button */
+/catalog/layer/content/layer/record_button/button {
+    width: 80;
+    height: 80;
+    position: absolute;
+    bottom: 120;
+    left: 1pw / 2 - 40;
+    font-size: 48;
+    background-color: #FF0050;
+    border-radius: 40;
+    border-width: 5;
+    border-color: #FFFFFF;
+    color: #FFFFFF;
+}
+
+/* Record Hint */
+/catalog/layer/content/layer/record_button/label {
+    width: 200;
+    height: 30;
+    position: absolute;
+    bottom: 80;
+    left: 1pw / 2 - 100;
+    color: #FFFFFF;
+    font-size: 14;
+    text-align: center;
+}
+
+/* Upload Button */
+/catalog/layer/content/layer/upload_option/button {
+    width: 200;
+    height: 50;
+    position: absolute;
+    bottom: 20;
+    left: 1pw / 2 - 100;
+    background-color: rgba(255, 255, 255, 0.2);
+    border-radius: 25;
+    color: #FFFFFF;
+    font-size: 14;
+    text-align: center;
+}

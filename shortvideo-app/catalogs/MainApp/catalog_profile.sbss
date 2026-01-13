@@ -1,0 +1,176 @@
+import themes.sbss
+
+/* Main Container */
+/catalog/layer {
+    width: 1pw;
+    height: 1ph;
+    background-color: #000000;
+}
+
+/* Header */
+/catalog/layer/header/layer {
+    width: 1pw;
+    height: 60;
+    direction: hori;
+    align: center;
+    border-bottom-width: 0.5;
+    border-bottom-color: #333333;
+}
+
+/catalog/layer/header/layer/button {
+    width: 60;
+    height: 60;
+    font-size: 20;
+}
+
+/catalog/layer/header/layer/label {
+    width: 1pw - 120;
+    height: 60;
+    color: #FFFFFF;
+    font-size: 16;
+    font-weight: bold;
+    text-align: center;
+}
+
+/* Profile Info Container */
+/catalog/layer/profile_info/layer {
+    width: 1pw;
+    padding: 20;
+    direction: vert;
+    align: center;
+}
+
+/* Profile Avatar */
+/catalog/layer/profile_info/layer/image {
+    width: 100;
+    height: 100;
+    border-radius: 50;
+    border-width: 2;
+    border-color: #FFFFFF;
+    margin-bottom: 15;
+}
+
+/* Profile Username */
+/catalog/layer/profile_info/layer/label:nth-child(2) {
+    width: 1pw;
+    height: 30;
+    color: #FFFFFF;
+    font-size: 20;
+    font-weight: bold;
+    text-align: center;
+    margin-bottom: 10;
+}
+
+/* Profile Bio */
+/catalog/layer/profile_info/layer/label:nth-child(3) {
+    width: 1pw - 40;
+    color: #CCCCCC;
+    font-size: 14;
+    text-align: center;
+    margin-bottom: 20;
+}
+
+/* Stats Container */
+/catalog/layer/profile_info/layer/stats_container/layer {
+    width: 1pw - 40;
+    height: 60;
+    direction: hori;
+    align: center;
+    margin-bottom: 20;
+}
+
+/* Stat Item */
+/catalog/layer/profile_info/layer/stats_container/layer/stat_item/layer {
+    width: (1pw - 40) / 3;
+    height: 60;
+    direction: vert;
+    align: center;
+}
+
+/* Stat Number */
+/catalog/layer/profile_info/layer/stats_container/layer/stat_item/layer/label:nth-child(1) {
+    width: 100%;
+    height: 30;
+    color: #FFFFFF;
+    font-size: 18;
+    font-weight: bold;
+    text-align: center;
+}
+
+/* Stat Label */
+/catalog/layer/profile_info/layer/stats_container/layer/stat_item/layer/label:nth-child(2) {
+    width: 100%;
+    height: 20;
+    color: #999999;
+    font-size: 12;
+    text-align: center;
+}
+
+/* Edit Button */
+/catalog/layer/profile_info/layer/button {
+    width: 1pw - 40;
+    height: 45;
+    background-color: #333333;
+    border-radius: 5;
+    color: #FFFFFF;
+    font-size: 14;
+    font-weight: bold;
+    text-align: center;
+}
+
+/* Tabs Container */
+/catalog/layer/tabs/layer {
+    width: 1pw;
+    height: 50;
+    direction: hori;
+    border-bottom-width: 0.5;
+    border-bottom-color: #333333;
+}
+
+/* Tab Button */
+/catalog/layer/tabs/layer/button {
+    width: 1pw / 3;
+    height: 50;
+    font-size: 24;
+    color: #999999;
+}
+
+/* Videos Grid */
+/catalog/layer/videos_grid/list {
+    display: scroll;
+    scroll-direction: vert;
+    width: 1pw;
+    height: 1ph - 60 - 290 - 50;
+    direction: hori;
+    wrap: wrap;
+}
+
+/* Grid Item */
+/catalog/layer/videos_grid/list/section {
+    width: 1pw / 3;
+    height: 1pw / 3 * 1.5;
+    position: relative;
+    border-width: 0.5;
+    border-color: #000000;
+}
+
+/* Video Thumbnail */
+/catalog/layer/videos_grid/list/section/image {
+    width: 100%;
+    height: 100%;
+    content-mode: aspect-fill;
+}
+
+/* Views Label */
+/catalog/layer/videos_grid/list/section/label {
+    width: auto;
+    height: 25;
+    position: absolute;
+    bottom: 5;
+    left: 5;
+    color: #FFFFFF;
+    font-size: 12;
+    font-weight: bold;
+    padding-left: 5;
+    padding-right: 5;
+}

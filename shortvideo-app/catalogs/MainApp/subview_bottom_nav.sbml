@@ -1,0 +1,11 @@
+=begin subview_bottom_nav
+
+=object layer: style=bottom_nav_container
+    =object button: id=nav_home, text="🏠", script=nav_home_script.js, style=nav_button
+    =object button: id=nav_discover, text="🔍", script=nav_discover_script.js, style=nav_button
+    =object button: id=nav_create, text="➕", script=nav_create_script.js, style=nav_create_button
+    =object button: id=nav_inbox, text="💬", script=nav_inbox_script.js, style=nav_button
+    =object button: id=nav_profile, text="👤", script=nav_profile_script.js, style=nav_button
+=end layer
+
+=end subview_bottom_nav

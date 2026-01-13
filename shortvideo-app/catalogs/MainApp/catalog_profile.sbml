@@ -1,0 +1,58 @@
+=begin catalog
+
+=object layer: style=profile_container
+    =begin header
+    =object layer: style=profile_header
+        =object button: id=btn_settings, text="⚙️", script=settings_script.js, style=settings_button
+        =object label: text=$username, style=username_header
+    =end layer
+    =end header
+
+    =begin profile_info
+    =object layer: style=profile_info_container
+        =object image: image=$userAvatar, style=profile_avatar
+        =object label: text=@$username, style=profile_username
+        =object label: text=$bio, style=profile_bio
+
+        =object layer: style=stats_container
+            =object layer: style=stat_item
+                =object label: text=$followingCount, style=stat_number
+                =object label: text="팔로잉", style=stat_label
+            =end layer
+
+            =object layer: style=stat_item
+                =object label: text=$followersCount, style=stat_number
+                =object label: text="팔로워", style=stat_label
+            =end layer
+
+            =object layer: style=stat_item
+                =object label: text=$likesCount, style=stat_number
+                =object label: text="좋아요", style=stat_label
+            =end layer
+        =end layer
+
+        =object button: id=btn_edit_profile, text="프로필 편집", script=edit_profile_script.js, style=edit_button
+    =end layer
+    =end profile_info
+
+    =begin tabs
+    =object layer: style=tabs_container
+        =object button: id=tab_videos, text="🎬", script=tab_videos_script.js, style=tab_button
+        =object button: id=tab_liked, text="❤️", script=tab_liked_script.js, style=tab_button
+        =object button: id=tab_bookmarks, text="🔖", script=tab_bookmarks_script.js, style=tab_button
+    =end layer
+    =end tabs
+
+    =begin videos_grid
+    =object list: id=videos_grid, style=videos_grid_style
+        =for $video in $userVideos
+            =object section: style=grid_item_style
+                =object image: image=$video.thumbnail, style=video_thumbnail, script=video_thumbnail_script.js
+                =object label: text=$video.views, style=views_label
+            =end section
+        =for
+    =end list
+    =end videos_grid
+=end layer
+
+=end catalog

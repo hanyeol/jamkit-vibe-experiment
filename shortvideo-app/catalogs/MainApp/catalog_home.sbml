@@ -1,0 +1,36 @@
+=begin catalog
+
+=begin video_feed
+=object list: id=video_list, style=video_list_style
+    =for $video in $videos
+        =object section: style=video_item_style
+            =object video_player: video=$video.url, autoplay=yes, loop=yes, mute=no, style=video_player_style, script=video_player_script.js
+
+            =object layer: style=overlay_layer
+                =begin right_sidebar
+                =object layer: style=sidebar_container
+                    =object button: id=btn_like, image=Images/icon_heart.png, script=like_button_script.js, style=action_button
+                    =object label: text=$video.likes, style=action_label
+
+                    =object button: id=btn_comment, image=Images/icon_comment.png, script=comment_button_script.js, style=action_button
+                    =object label: text=$video.comments, style=action_label
+
+                    =object button: id=btn_share, image=Images/icon_share.png, script=share_button_script.js, style=action_button
+                    =object label: text="공유", style=action_label
+
+                    =object button: id=btn_profile, image=$video.author.avatar, script=profile_button_script.js, style=profile_button
+                =end right_sidebar
+
+                =begin bottom_info
+                =object layer: style=info_container
+                    =object label: text=@$video.author.username, style=username_label
+                    =object label: text=$video.description, style=description_label
+                    =object label: text=$video.music, style=music_label
+                =end bottom_info
+            =end layer
+        =end section
+    =for
+=end list
+=end video_feed
+
+=end catalog

@@ -1,0 +1,37 @@
+=begin catalog
+
+=object layer: style=create_container
+    =begin header
+    =object layer: style=header_container
+        =object button: id=btn_close, text="✕", script=close_script.js, style=close_button
+        =object label: text="새 비디오", style=header_title
+        =object button: id=btn_next, text="다음", script=next_script.js, style=next_button
+    =end layer
+    =end header
+
+    =begin content
+    =object layer: style=content_container
+        =object camera_view: id=camera, style=camera_style, script=camera_script.js
+
+        =begin options
+        =object layer: style=options_container
+            =object button: id=btn_flip, text="🔄", script=flip_camera_script.js, style=option_button
+            =object button: id=btn_speed, text="1x", script=speed_script.js, style=option_button
+            =object button: id=btn_beauty, text="✨", script=beauty_script.js, style=option_button
+            =object button: id=btn_filter, text="🎨", script=filter_script.js, style=option_button
+        =end layer
+        =end options
+
+        =begin record_button
+        =object button: id=btn_record, text="⏺", script=record_script.js, style=record_button
+        =object label: text="탭하여 녹화", style=record_hint
+        =end record_button
+
+        =begin upload_option
+        =object button: id=btn_upload, text="📤 갤러리에서 선택", script=upload_script.js, style=upload_button
+        =end upload_option
+    =end layer
+    =end content
+=end layer
+
+=end catalog

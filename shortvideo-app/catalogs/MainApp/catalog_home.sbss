@@ -1,0 +1,113 @@
+import themes.sbss
+
+/* Video List - 전체 화면 세로 스크롤 */
+/catalog/video_feed/video_list {
+    display: scroll;
+    scroll-direction: vert;
+    width: 1pw;
+    height: 1ph;
+    background-color: #000000;
+    paging: yes;
+    snap-to-item: yes;
+}
+
+/* Video Item - 각 비디오가 전체 화면 차지 */
+/catalog/video_feed/video_list/section {
+    width: 1pw;
+    height: 1ph;
+    position: relative;
+}
+
+/* Video Player - 전체 화면 */
+/catalog/video_feed/video_list/section/video_player {
+    width: 1pw;
+    height: 1ph;
+    content-mode: aspect-fill;
+    background-color: #000000;
+}
+
+/* Overlay Layer - 비디오 위 오버레이 */
+/catalog/video_feed/video_list/section/layer {
+    width: 1pw;
+    height: 1ph;
+    position: absolute;
+    left: 0;
+    top: 0;
+}
+
+/* Right Sidebar - 우측 액션 버튼들 */
+/catalog/video_feed/video_list/section/layer/right_sidebar/layer {
+    width: 60;
+    height: 1ph;
+    position: absolute;
+    right: 10;
+    bottom: 100;
+    direction: vert;
+    align: bottom;
+}
+
+/* Action Button - 좋아요, 댓글, 공유 버튼 */
+/catalog/video_feed/video_list/section/layer/right_sidebar/layer/button {
+    width: 50;
+    height: 50;
+    margin-bottom: 20;
+    content-mode: aspect-fit;
+}
+
+/* Action Label - 버튼 아래 숫자/텍스트 */
+/catalog/video_feed/video_list/section/layer/right_sidebar/layer/label {
+    width: 50;
+    height: 20;
+    color: #FFFFFF;
+    font-size: 12;
+    text-align: center;
+    margin-bottom: 15;
+}
+
+/* Profile Button - 프로필 이미지 버튼 */
+/catalog/video_feed/video_list/section/layer/right_sidebar/layer/button#btn_profile {
+    width: 50;
+    height: 50;
+    margin-bottom: 20;
+    border-radius: 25;
+    border-width: 2;
+    border-color: #FFFFFF;
+}
+
+/* Bottom Info Container */
+/catalog/video_feed/video_list/section/layer/bottom_info/layer {
+    width: 1pw - 70;
+    height: 150;
+    position: absolute;
+    left: 10;
+    bottom: 30;
+    direction: vert;
+    align: bottom;
+}
+
+/* Username Label */
+/catalog/video_feed/video_list/section/layer/bottom_info/layer/label:nth-child(1) {
+    width: 1pw;
+    height: 25;
+    color: #FFFFFF;
+    font-size: 16;
+    font-weight: bold;
+    margin-bottom: 8;
+}
+
+/* Description Label */
+/catalog/video_feed/video_list/section/layer/bottom_info/layer/label:nth-child(2) {
+    width: 1pw;
+    color: #FFFFFF;
+    font-size: 14;
+    margin-bottom: 8;
+}
+
+/* Music Label */
+/catalog/video_feed/video_list/section/layer/bottom_info/layer/label:nth-child(3) {
+    width: 1pw;
+    height: 20;
+    color: #FFFFFF;
+    font-size: 12;
+    font-style: italic;
+}
