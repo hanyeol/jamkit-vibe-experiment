@@ -1,0 +1,92 @@
+import themes.sbss
+
+/catalog {
+    page-background-color: #000000;
+    background-color: #000000;
+    padding: 0;
+    margin: 0;
+}
+
+/catalog/video-feed {
+    display: block;
+    background-color: #000000;
+    padding: 0;
+    margin: 0;
+}
+
+/catalog/video-feed/video-item {
+    display: block;
+    background-color: #1a1a1a;
+    margin-bottom: 2;
+    padding: 20;
+    border-bottom-width: 1;
+    border-bottom-color: #333333;
+    page-background-color: #1a1a1a;
+}
+
+/catalog/video-feed/video-item/video-content {
+    display: block;
+    background-color: #2a2a2a;
+    padding: 80 20;
+    margin-bottom: 15;
+    text-align: center;
+    border-radius: 10;
+}
+
+/catalog/video-feed/video-item/video-content/placeholder {
+    display: block;
+    font-size: 3em;
+    text-color: #666666;
+    text-align: center;
+}
+
+/catalog/video-feed/video-item/right-actions {
+    display: block;
+    margin-bottom: 15;
+}
+
+/catalog/video-feed/video-item/right-actions/action-item {
+    display: block;
+    margin-bottom: 15;
+    text-align: center;
+    background-color: #2a2a2a;
+    padding: 10;
+    border-radius: 8;
+}
+
+/catalog/video-feed/video-item/right-actions/action-item/action-icon {
+    display: block;
+    font-size: 2.5em;
+    text-align: center;
+    margin-bottom: 5;
+}
+
+/catalog/video-feed/video-item/right-actions/action-item/action-text {
+    display: block;
+    text-color: #ffffff;
+    font-size: 0.85em;
+    text-align: center;
+    font-weight: bold;
+}
+
+/catalog/video-feed/video-item/video-info {
+    display: block;
+    background-color: #2a2a2a;
+    padding: 15;
+    border-radius: 8;
+}
+
+/catalog/video-feed/video-item/video-info/creator-name {
+    display: block;
+    text-color: #ffffff;
+    font-weight: bold;
+    font-size: 1.1em;
+    margin-bottom: 8;
+}
+
+/catalog/video-feed/video-item/video-info/video-desc {
+    display: block;
+    text-color: #cccccc;
+    font-size: 0.95em;
+    line-spacing: 1.4;
+}

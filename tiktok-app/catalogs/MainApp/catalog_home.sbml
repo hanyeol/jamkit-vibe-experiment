@@ -1,0 +1,146 @@
+=begin catalog
+
+=begin video-feed
+    =comment Video 1
+    =begin video-item
+        =begin video-content
+            =begin placeholder
+            🎬 Video 1
+            =end placeholder
+        =end video-content
+
+        =begin right-actions
+            =begin action-item
+                =begin action-icon
+                ♥
+                =end action-icon
+                =begin action-text
+                125K
+                =end action-text
+            =end action-item
+
+            =begin action-item
+                =begin action-icon
+                💬
+                =end action-icon
+                =begin action-text
+                1,234
+                =end action-text
+            =end action-item
+
+            =begin action-item
+                =begin action-icon
+                ➤
+                =end action-icon
+                =begin action-text
+                Share
+                =end action-text
+            =end action-item
+        =end right-actions
+
+        =begin video-info
+            =begin creator-name
+            @creator_name
+            =end creator-name
+            =begin video-desc
+            Check out this amazing video! #fyp #viral
+            =end video-desc
+        =end video-info
+    =end video-item
+
+    =comment Video 2
+    =begin video-item
+        =begin video-content
+            =begin placeholder
+            🎥 Video 2
+            =end placeholder
+        =end video-content
+
+        =begin right-actions
+            =begin action-item
+                =begin action-icon
+                ♥
+                =end action-icon
+                =begin action-text
+                89K
+                =end action-text
+            =end action-item
+
+            =begin action-item
+                =begin action-icon
+                💬
+                =end action-icon
+                =begin action-text
+                892
+                =end action-text
+            =end action-item
+
+            =begin action-item
+                =begin action-icon
+                ➤
+                =end action-icon
+                =begin action-text
+                Share
+                =end action-text
+            =end action-item
+        =end right-actions
+
+        =begin video-info
+            =begin creator-name
+            @another_creator
+            =end creator-name
+            =begin video-desc
+            Amazing content here! Follow for more 🔥
+            =end video-desc
+        =end video-info
+    =end video-item
+
+    =comment Video 3
+    =begin video-item
+        =begin video-content
+            =begin placeholder
+            🎞️ Video 3
+            =end placeholder
+        =end video-content
+
+        =begin right-actions
+            =begin action-item
+                =begin action-icon
+                ♥
+                =end action-icon
+                =begin action-text
+                256K
+                =end action-text
+            =end action-item
+
+            =begin action-item
+                =begin action-icon
+                💬
+                =end action-icon
+                =begin action-text
+                3.2K
+                =end action-text
+            =end action-item
+
+            =begin action-item
+                =begin action-icon
+                ➤
+                =end action-icon
+                =begin action-text
+                Share
+                =end action-text
+            =end action-item
+        =end right-actions
+
+        =begin video-info
+            =begin creator-name
+            @trending_user
+            =end creator-name
+            =begin video-desc
+            This is trending! Don't miss it 🎬✨
+            =end video-desc
+        =end video-info
+    =end video-item
+=end video-feed
+
+=end catalog
