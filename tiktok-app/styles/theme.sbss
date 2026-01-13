@@ -1,0 +1,152 @@
+$PLATFORM = "ios"
+$PRIMARY_COLOR = #000000
+$SECONDARY_COLOR = #ffffff
+$ACCENT_COLOR = #fe2c55
+$TEXT_PRIMARY = #ffffff
+$TEXT_SECONDARY = #b8b8b8
+$ICON_SIZE = 32dp
+$BUTTON_SIZE = 48dp
+$PADDING = 16dp
+$FONT_SMALL = 12pt
+$FONT_MEDIUM = 14pt
+$FONT_LARGE = 16pt
+
+if $PLATFORM == "ios"
+    $SYSTEM_FONT = "SF Pro"
+elif $PLATFORM == "android"
+    $SYSTEM_FONT = "Roboto"
+else
+    $SYSTEM_FONT = "Arial"
+end
+
+@root {
+    width: 100%;
+    height: 100%;
+    background-color: $PRIMARY_COLOR;
+    font-family: $SYSTEM_FONT;
+}
+
+%video-container {
+    width: 100%;
+    height: 100%;
+    position: relative;
+}
+
+%action-bar {
+    position: absolute;
+    right: $PADDING;
+    bottom: 100dp;
+    layout: vertical;
+    spacing: 20dp;
+}
+
+%action-button {
+    width: $BUTTON_SIZE;
+    height: $BUTTON_SIZE;
+    border-radius: 24dp;
+    layout: vertical;
+    align: center;
+    justify: center;
+}
+
+%icon {
+    width: $ICON_SIZE;
+    height: $ICON_SIZE;
+}
+
+%info-bar {
+    position: absolute;
+    left: $PADDING;
+    bottom: 80dp;
+    right: 80dp;
+}
+
+%username {
+    font-size: $FONT_MEDIUM;
+    font-weight: bold;
+    color: $TEXT_PRIMARY;
+    margin-bottom: 8dp;
+}
+
+%description {
+    font-size: $FONT_SMALL;
+    color: $TEXT_PRIMARY;
+    line-height: 1.4;
+    margin-bottom: 12dp;
+}
+
+%music-info {
+    font-size: $FONT_SMALL;
+    color: $TEXT_SECONDARY;
+}
+
+%profile-pic {
+    width: 48dp;
+    height: 48dp;
+    border-radius: 24dp;
+    border-width: 2dp;
+    border-color: $SECONDARY_COLOR;
+}
+
+%like-count {
+    font-size: $FONT_SMALL;
+    color: $TEXT_PRIMARY;
+    text-align: center;
+    margin-top: 4dp;
+}
+
+%bottom-nav {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 60dp;
+    background-color: rgba(0,0,0,0.3);
+    layout: horizontal;
+    align: center;
+    justify: space-around;
+}
+
+%nav-item {
+    layout: vertical;
+    align: center;
+    padding: 8dp;
+}
+
+%nav-icon {
+    width: 24dp;
+    height: 24dp;
+    margin-bottom: 4dp;
+}
+
+%nav-label {
+    font-size: 10pt;
+    color: $TEXT_SECONDARY;
+}
+
+#bold {
+    font-weight: bold;
+}
+
+#accent {
+    color: $ACCENT_COLOR;
+}
+
+#white {
+    color: $TEXT_PRIMARY;
+}
+
+@card {
+    background-color: rgba(255,255,255,0.1);
+    border-radius: 12dp;
+    padding: $PADDING;
+}
+
+@overlay {
+    background: linear-gradient(transparent, rgba(0,0,0,0.6));
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 200dp;
+}

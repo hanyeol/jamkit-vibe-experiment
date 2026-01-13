@@ -1,0 +1,103 @@
+=import "styles/theme.sbss"
+
+=begin section: id=video-feed, props=video-container
+
+=comment Video Player
+=object video-player: id=main-video, src="assets/videos/sample1.mp4", autoplay=true, loop=true, muted=false, controls=false
+
+=comment Bottom gradient overlay
+=begin section: props=overlay
+=end
+
+=comment User Info and Description
+=begin section: props=info-bar
+
+=begin section: layout=horizontal, spacing=12dp, margin-bottom=12dp
+=image profile.jpg: props=profile-pic
+=begin section: layout=vertical
+=[bold,white|@username|]=
+=[white: font-size=12pt|팔로우|]=
+=end
+=end
+
+=begin section: props=description
+=[white|오늘의 일상 브이로그 🎬\n#일상 #브이로그 #데일리|]=
+=end
+
+=begin section: props=music-info, layout=horizontal, spacing=8dp
+=object icon: type=music, color=#ffffff, size=14dp
+=[white|Original Sound - username|]=
+=end
+
+=end
+
+=comment Right Action Bar
+=begin section: props=action-bar
+
+=comment Profile with plus button
+=begin section: margin-bottom=16dp
+=image profile.jpg: props=profile-pic
+=object icon: type=plus, props=icon, style=position:absolute;bottom:-4dp;right:-4dp;background:#fe2c55;border-radius:10dp;width:20dp;height:20dp
+=end
+
+=comment Like button
+=begin section: props=action-button
+=object icon: type=heart, color=#ffffff, size=32dp
+=begin section: props=like-count
+12.5K
+=end
+=end
+
+=comment Comment button
+=begin section: props=action-button
+=object icon: type=comment, color=#ffffff, size=32dp
+=begin section: props=like-count
+1,234
+=end
+=end
+
+=comment Share button
+=begin section: props=action-button
+=object icon: type=share, color=#ffffff, size=32dp
+=begin section: props=like-count
+공유
+=end
+=end
+
+=comment More options
+=begin section: props=action-button
+=object icon: type=more-vertical, color=#ffffff, size=32dp
+=end
+
+=end
+
+=comment Bottom Navigation
+=begin section: props=bottom-nav
+
+=begin section: props=nav-item
+=object icon: type=home, props=nav-icon, color=#ffffff
+=[white|홈|]=
+=end
+
+=begin section: props=nav-item
+=object icon: type=search, props=nav-icon, color=#b8b8b8
+=[|발견|]=
+=end
+
+=begin section: props=nav-item
+=object icon: type=plus-square, size=32dp, color=#ffffff
+=end
+
+=begin section: props=nav-item
+=object icon: type=inbox, props=nav-icon, color=#b8b8b8
+=[|받은편지함|]=
+=end
+
+=begin section: props=nav-item
+=object icon: type=user, props=nav-icon, color=#b8b8b8
+=[|나|]=
+=end
+
+=end
+
+=end

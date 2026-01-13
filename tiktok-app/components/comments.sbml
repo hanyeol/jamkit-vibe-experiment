@@ -1,0 +1,115 @@
+=import "styles/theme.sbss"
+
+=comment Comments Bottom Sheet Component
+
+=begin section: id=comments-sheet, \
+    style=position:absolute;bottom:0;left:0;right:0;height:70%;background:#1a1a1a;border-top-left-radius:20dp;border-top-right-radius:20dp
+
+=comment Header
+=begin section: style=padding:16dp;border-bottom:1dp solid #333;layout:horizontal;align:center;justify:space-between
+
+=begin section: layout=horizontal, spacing=8dp
+=[white: font-size=16pt, font-weight=bold|1,234개의 댓글|]=
+=end
+
+=object icon: type=x, size=24dp, color=#b8b8b8
+
+=end
+
+=comment Comments List
+=begin section: id=comments-list, style=padding:16dp;overflow:scroll;height:calc(100%-140dp)
+
+=comment Comment Item 1
+=begin section: style=margin-bottom:20dp;layout:horizontal;spacing:12dp
+
+=image user1.jpg: style=width:32dp;height:32dp;border-radius:16dp
+
+=begin section: style=flex:1
+
+=begin section: layout=horizontal, spacing=8dp, margin-bottom:4dp
+=[white: font-size=13pt, font-weight=600|user123|]=
+=[: color=#b8b8b8, font-size=11pt|2시간 전|]=
+=end
+
+=[white: font-size=13pt|정말 멋진 영상이네요! 👍|]=
+
+=begin section: layout=horizontal, spacing=16dp, margin-top:8dp
+=[: color=#b8b8b8, font-size=11pt|답글 달기|]=
+=[: color=#b8b8b8, font-size=11pt|좋아요 128개|]=
+=end
+
+=end
+
+=object icon: type=heart, size=16dp, color=#b8b8b8
+
+=end
+
+=comment Comment Item 2
+=begin section: style=margin-bottom:20dp;layout:horizontal;spacing:12dp
+
+=image user2.jpg: style=width:32dp;height:32dp;border-radius:16dp
+
+=begin section: style=flex:1
+
+=begin section: layout=horizontal, spacing=8dp, margin-bottom:4dp
+=[white: font-size=13pt, font-weight=600|creator_name|]=
+=[accent: font-size=11pt|작성자|]=
+=[: color=#b8b8b8, font-size=11pt|1시간 전|]=
+=end
+
+=[white: font-size=13pt|감사합니다! ❤️|]=
+
+=begin section: layout=horizontal, spacing=16dp, margin-top:8dp
+=[: color=#b8b8b8, font-size=11pt|답글 달기|]=
+=[: color=#b8b8b8, font-size=11pt|좋아요 45개|]=
+=end
+
+=end
+
+=object icon: type=heart, size=16dp, color=#fe2c55, fill=true
+
+=end
+
+=comment Comment Item 3
+=begin section: style=margin-bottom:20dp;layout:horizontal;spacing:12dp
+
+=image user3.jpg: style=width:32dp;height:32dp;border-radius:16dp
+
+=begin section: style=flex:1
+
+=begin section: layout=horizontal, spacing=8dp, margin-bottom=4dp
+=[white: font-size=13pt, font-weight=600|happyuser|]=
+=[: color=#b8b8b8, font-size=11pt|30분 전|]=
+=end
+
+=[white: font-size=13pt|다음 편도 기대됩니다!|]=
+
+=begin section: layout=horizontal, spacing=16dp, margin-top:8dp
+=[: color=#b8b8b8, font-size=11pt|답글 달기|]=
+=[: color=#b8b8b8, font-size=11pt|좋아요 23개|]=
+=end
+
+=end
+
+=object icon: type=heart, size=16dp, color=#b8b8b8
+
+=end
+
+=end
+
+=comment Input Area
+=begin section: style=position:absolute;bottom:0;left:0;right:0;padding:12dp;background:#1a1a1a;border-top:1dp solid #333;layout:horizontal;spacing:12dp;align:center
+
+=image my-profile.jpg: style=width:32dp;height:32dp;border-radius:16dp
+
+=object input: \
+    placeholder="댓글을 입력하세요...", \
+    style=flex:1;background:#2a2a2a;border-radius:20dp;padding:10dp 16dp;color:#ffffff;font-size:13pt
+
+=object icon: type=at-sign, size=20dp, color=#b8b8b8, style=margin:0 8dp
+
+=object icon: type=smile, size=20dp, color=#b8b8b8
+
+=end
+
+=end

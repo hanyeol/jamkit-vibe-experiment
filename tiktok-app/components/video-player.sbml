@@ -1,0 +1,39 @@
+=import "styles/theme.sbss"
+
+=comment Reusable Video Player Component
+=comment Usage: =import "components/video-player.sbml" and provide video source
+
+=begin section: id=video-player-component, props=video-container
+
+=comment Video object with playback controls
+=object video: id=video-element, \
+    src=$VIDEO_SOURCE, \
+    autoplay=true, \
+    loop=true, \
+    muted=false, \
+    controls=false, \
+    width=100%, \
+    height=100%, \
+    object-fit=cover
+
+=comment Playback controls overlay (tap to pause/play)
+=begin section: id=playback-overlay, \
+    style=position:absolute;top:0;left:0;right:0;bottom:0;background:transparent
+
+=comment Pause icon (shown when video is paused)
+=begin section: id=pause-indicator, \
+    style=position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);display:none
+=object icon: type=pause-circle, size=80dp, color=rgba(255,255,255,0.8)
+=end
+
+=end
+
+=comment Video progress bar
+=begin section: id=progress-bar, \
+    style=position:absolute;bottom:0;left:0;right:0;height:2dp;background:rgba(255,255,255,0.3)
+=begin section: id=progress-fill, \
+    style=height:100%;background:#ffffff;width:0%
+=end
+=end
+
+=end
