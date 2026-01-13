@@ -1,0 +1,99 @@
+import themes.sbss
+
+$BLACK = #000000
+$WHITE = #ffffff
+$TIKTOK_RED = #fe2c55
+$GRAY_LIGHT = #c0c0c0
+$GRAY_DARK = #161823
+
+/catalog {
+    page-background-color: $BLACK;
+    text-color: $WHITE;
+    width: 100%;
+    height: 100%;
+}
+
+/catalog/section {
+    width: 100%;
+    height: 100%;
+}
+
+#video-scroll-container {
+    display: block;
+    width: 100%;
+    height: 100%;
+    scroll-direction: vertical;
+    scroll-paging: yes;
+    scroll-indicator: no;
+}
+
+#video-item {
+    display: block;
+    position: relative;
+    width: 100%;
+    height: 100%;
+    background-color: $BLACK;
+}
+
+#video-overlay {
+    display: block;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+}
+
+#right-sidebar {
+    display: block;
+    position: absolute;
+    right: 10dp;
+    bottom: 100dp;
+    width: 60dp;
+    layout: vertical;
+    spacing: 20dp;
+}
+
+#action-button {
+    display: block;
+    width: 48dp;
+    height: 48dp;
+    background-color: rgba(255,255,255,0.2);
+    border-radius: 24dp;
+    text-align: center;
+    gravity: center;
+    font-size: 24dp;
+}
+
+#action-count {
+    display: block;
+    width: 48dp;
+    text-align: center;
+    font-size: 12dp;
+    color: $WHITE;
+    margin-top: 4dp;
+}
+
+#bottom-info {
+    display: block;
+    position: absolute;
+    bottom: 20dp;
+    left: 20dp;
+    right: 80dp;
+    layout: vertical;
+    spacing: 8dp;
+}
+
+#username {
+    display: block;
+    font-size: 16dp;
+    font-weight: bold;
+    color: $WHITE;
+}
+
+#description {
+    display: block;
+    font-size: 14dp;
+    color: $WHITE;
+    line-height: 1.4;
+}

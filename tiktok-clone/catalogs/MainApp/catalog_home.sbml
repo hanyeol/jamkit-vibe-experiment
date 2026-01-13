@@ -1,0 +1,70 @@
+=begin catalog: style=video-feed
+
+=begin section: id=video-container, style=video-scroll-container
+
+=begin section: id=video-1, style=video-item
+=object video: id=player-1, filename=sample1.mp4, autoplay=yes, loop=yes, muted=no
+=begin section: style=video-overlay
+=begin section: style=right-sidebar
+=object button: id=like-btn-1, style=action-button, icon=heart, action=popup, popup-id=like-popup
+=object text: style=action-count, text=2.5K
+
+=object button: id=comment-btn-1, style=action-button, icon=comment, action=popup, popup-id=comment-popup
+=object text: style=action-count, text=834
+
+=object button: id=share-btn-1, style=action-button, icon=share, action=popup, popup-id=share-popup
+=object text: style=action-count, text=Share
+=end section
+
+=begin section: style=bottom-info
+=object text: style=username, text=@creator_name
+=object text: style=description, text=Amazing video content! Check this out #fyp #viral
+=end section
+=end section
+=end section
+
+=begin section: id=video-2, style=video-item
+=object video: id=player-2, filename=sample2.mp4, autoplay=no, loop=yes, muted=no
+=begin section: style=video-overlay
+=begin section: style=right-sidebar
+=object button: id=like-btn-2, style=action-button, icon=heart
+=object text: style=action-count, text=5.2K
+
+=object button: id=comment-btn-2, style=action-button, icon=comment
+=object text: style=action-count, text=1.2K
+
+=object button: id=share-btn-2, style=action-button, icon=share
+=object text: style=action-count, text=Share
+=end section
+
+=begin section: style=bottom-info
+=object text: style=username, text=@another_creator
+=object text: style=description, text=Cool stuff happening here! #trending #awesome
+=end section
+=end section
+=end section
+
+=begin section: id=video-3, style=video-item
+=object video: id=player-3, filename=sample3.mp4, autoplay=no, loop=yes, muted=no
+=begin section: style=video-overlay
+=begin section: style=right-sidebar
+=object button: id=like-btn-3, style=action-button, icon=heart
+=object text: style=action-count, text=12.8K
+
+=object button: id=comment-btn-3, style=action-button, icon=comment
+=object text: style=action-count, text=3.4K
+
+=object button: id=share-btn-3, style=action-button, icon=share
+=object text: style=action-count, text=Share
+=end section
+
+=begin section: style=bottom-info
+=object text: style=username, text=@creative_user
+=object text: style=description, text=You won't believe what happens next! #viral #amazing #mustsee
+=end section
+=end section
+=end section
+
+=end section
+
+=end catalog

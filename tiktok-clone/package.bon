@@ -1,0 +1,7 @@
+{
+    id: com.yourdomain.253fa8e0-0007-43f8-85e5-d7db0dde43d5,
+    language: en,
+    version: 1.0,
+    title: "${APP_TITLE}",
+    description: "${APP_DESCRIPTION}"
+}
