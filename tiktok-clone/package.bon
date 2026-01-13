@@ -1,0 +1,7 @@
+{
+    id: com.100days.tiktok,
+    language: en,
+    version: 1.0,
+    title: "${APP_TITLE}",
+    description: "${APP_DESCRIPTION}"
+}

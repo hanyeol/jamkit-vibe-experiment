@@ -1,0 +1,153 @@
+=begin catalog
+
+=begin video-feed
+    =object slider: type=page, orientation=vertical, paging=yes, shows-paging-buttons=no
+        =begin row
+            =object video-item: id=video-1
+                =object video-player: id=player-1, source=https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/BigBuckBunny.mp4, autoplay=yes, loop=yes, controls=no
+                =end video-player
+                =object video-overlay
+                    =object right-controls
+                        =object profile-button: class=control-btn
+                            =object image: style=profile-image, source=#FFFFFF
+                            =end image
+                        =end profile-button
+                        =object like-button: class=control-btn
+                            =object label: text=♥, style=icon-text
+                            =end label
+                            =object label: text=1.2M, style=count-text
+                            =end label
+                        =end like-button
+                        =object comment-button: class=control-btn
+                            =object label: text=💬, style=icon-text
+                            =end label
+                            =object label: text=523, style=count-text
+                            =end label
+                        =end comment-button
+                        =object share-button: class=control-btn
+                            =object label: text=↗, style=icon-text
+                            =end label
+                            =object label: text=공유, style=count-text
+                            =end label
+                        =end share-button
+                    =end right-controls
+                    =object bottom-info
+                        =object username-label: text=@username, style=username-text
+                        =end username-label
+                        =object description-label: text=비디오 설명이 여기에 표시됩니다 #틱톡클론, style=description-text
+                        =end description-label
+                    =end bottom-info
+                =end video-overlay
+            =end video-item
+        =end row
+        =begin row
+            =object video-item: id=video-2
+                =object video-player: id=player-2, source=https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ElephantsDream.mp4, autoplay=no, loop=yes, controls=no
+                =end video-player
+                =object video-overlay
+                    =object right-controls
+                        =object profile-button: class=control-btn
+                            =object image: style=profile-image, source=#FFFFFF
+                            =end image
+                        =end profile-button
+                        =object like-button: class=control-btn
+                            =object label: text=♥, style=icon-text
+                            =end label
+                            =object label: text=856K, style=count-text
+                            =end label
+                        =end like-button
+                        =object comment-button: class=control-btn
+                            =object label: text=💬, style=icon-text
+                            =end label
+                            =object label: text=234, style=count-text
+                            =end label
+                        =end comment-button
+                        =object share-button: class=control-btn
+                            =object label: text=↗, style=icon-text
+                            =end label
+                            =object label: text=공유, style=count-text
+                            =end label
+                        =end share-button
+                    =end right-controls
+                    =object bottom-info
+                        =object username-label: text=@creator2, style=username-text
+                        =end username-label
+                        =object description-label: text=멋진 영상을 공유합니다! #viral #trending, style=description-text
+                        =end description-label
+                    =end bottom-info
+                =end video-overlay
+            =end video-item
+        =end row
+        =begin row
+            =object video-item: id=video-3
+                =object video-player: id=player-3, source=https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ForBiggerBlazes.mp4, autoplay=no, loop=yes, controls=no
+                =end video-player
+                =object video-overlay
+                    =object right-controls
+                        =object profile-button: class=control-btn
+                            =object image: style=profile-image, source=#FFFFFF
+                            =end image
+                        =end profile-button
+                        =object like-button: class=control-btn
+                            =object label: text=♥, style=icon-text
+                            =end label
+                            =object label: text=2.5M, style=count-text
+                            =end label
+                        =end like-button
+                        =object comment-button: class=control-btn
+                            =object label: text=💬, style=icon-text
+                            =end label
+                            =object label: text=789, style=count-text
+                            =end label
+                        =end comment-button
+                        =object share-button: class=control-btn
+                            =object label: text=↗, style=icon-text
+                            =end label
+                            =object label: text=공유, style=count-text
+                            =end label
+                        =end share-button
+                    =end right-controls
+                    =object bottom-info
+                        =object username-label: text=@bestcreator, style=username-text
+                        =end username-label
+                        =object description-label: text=오늘의 하이라이트 🔥 #best #video, style=description-text
+                        =end description-label
+                    =end bottom-info
+                =end video-overlay
+            =end video-item
+        =end row
+    =end slider
+=end video-feed
+
+=object bottom-nav: style=bottom-navigation
+    =object nav-home: class=nav-item
+        =object label: text=🏠, style=nav-icon
+        =end label
+        =object label: text=홈, style=nav-text
+        =end label
+    =end nav-home
+    =object nav-discover: class=nav-item
+        =object label: text=🔍, style=nav-icon
+        =end label
+        =object label: text=발견, style=nav-text
+        =end label
+    =end nav-discover
+    =object nav-create: class=nav-item-create
+        =object label: text=+, style=nav-icon-create
+        =end label
+    =end nav-create
+    =object nav-inbox: class=nav-item
+        =object label: text=💬, style=nav-icon
+        =end label
+        =object label: text=받은편지함, style=nav-text
+        =end label
+    =end nav-inbox
+    =object nav-profile: class=nav-item
+        =object label: text=👤, style=nav-icon
+        =end label
+        =object label: text=프로필, style=nav-text
+        =end label
+    =end nav-profile
+=end bottom-nav
+
+=end catalog
