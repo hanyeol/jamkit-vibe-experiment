@@ -1,0 +1,71 @@
+=begin catalog
+{
+    "version": "1",
+    "thumbnail": "thumbnail.png"
+}
+=end
+
+=begin data
+[
+    {
+        "id": "1",
+        "username": "김철수",
+        "avatar": "https://i.pravatar.cc/150?img=1",
+        "video": "https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/BigBuckBunny.mp4",
+        "description": "재미있는 비디오 #틱톡 #짧은영상",
+        "likes": 1234,
+        "comments": 56,
+        "shares": 23,
+        "music": "Original Sound - 김철수"
+    },
+    {
+        "id": "2",
+        "username": "이영희",
+        "avatar": "https://i.pravatar.cc/150?img=2",
+        "video": "https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ElephantsDream.mp4",
+        "description": "오늘의 일상 🎵 #브이로그 #daily",
+        "likes": 5678,
+        "comments": 123,
+        "shares": 45,
+        "music": "Trending Sound - Mix"
+    },
+    {
+        "id": "3",
+        "username": "박민수",
+        "avatar": "https://i.pravatar.cc/150?img=3",
+        "video": "https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ForBiggerBlazes.mp4",
+        "description": "멋진 순간 ✨ #viral #trending",
+        "likes": 9876,
+        "comments": 234,
+        "shares": 67,
+        "music": "Popular Music - Artist"
+    },
+    {
+        "id": "4",
+        "username": "최지원",
+        "avatar": "https://i.pravatar.cc/150?img=4",
+        "video": "https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ForBiggerEscapes.mp4",
+        "description": "여행 중 📸 #travel #adventure",
+        "likes": 3456,
+        "comments": 89,
+        "shares": 34,
+        "music": "Chill Vibes"
+    },
+    {
+        "id": "5",
+        "username": "정수현",
+        "avatar": "https://i.pravatar.cc/150?img=5",
+        "video": "https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ForBiggerFun.mp4",
+        "description": "재미있는 챌린지! 💃 #challenge #fun",
+        "likes": 7890,
+        "comments": 156,
+        "shares": 78,
+        "music": "Dance Beat"
+    }
+]
+=end
+
+=begin popup
+type = "video-feed"
+videos = $data
+=end

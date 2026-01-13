@@ -1,0 +1,240 @@
+=begin popup
+type = "profile"
+user = $data
+=end
+
+=begin layout: profile
+{
+    "type": "scroll",
+    "style": {
+        "width": "1pw",
+        "height": "1ph",
+        "background-color": "#FFFFFF"
+    },
+    "components": [
+        {
+            "type": "view",
+            "style": {
+                "padding": "20",
+                "align": "center"
+            },
+            "components": [
+                {
+                    "type": "image",
+                    "url": "={{$user.avatar}}",
+                    "style": {
+                        "width": "100",
+                        "height": "100",
+                        "border-radius": "50",
+                        "margin-bottom": "10"
+                    }
+                },
+                {
+                    "type": "text",
+                    "text": "={{\"@\" + $user.username}}",
+                    "style": {
+                        "font-size": "18",
+                        "font-weight": "bold",
+                        "margin-bottom": "10"
+                    }
+                },
+                {
+                    "type": "view",
+                    "style": {
+                        "flex-direction": "row",
+                        "margin-bottom": "20"
+                    },
+                    "components": [
+                        {
+                            "type": "view",
+                            "style": {
+                                "align": "center",
+                                "margin-right": "30"
+                            },
+                            "components": [
+                                {
+                                    "type": "text",
+                                    "text": "={{$user.following || \"123\"}}",
+                                    "style": {
+                                        "font-size": "18",
+                                        "font-weight": "bold"
+                                    }
+                                },
+                                {
+                                    "type": "text",
+                                    "text": "팔로잉",
+                                    "style": {
+                                        "font-size": "14",
+                                        "color": "#999999"
+                                    }
+                                }
+                            ]
+                        },
+                        {
+                            "type": "view",
+                            "style": {
+                                "align": "center",
+                                "margin-right": "30"
+                            },
+                            "components": [
+                                {
+                                    "type": "text",
+                                    "text": "={{$user.followers || \"45.6K\"}}",
+                                    "style": {
+                                        "font-size": "18",
+                                        "font-weight": "bold"
+                                    }
+                                },
+                                {
+                                    "type": "text",
+                                    "text": "팔로워",
+                                    "style": {
+                                        "font-size": "14",
+                                        "color": "#999999"
+                                    }
+                                }
+                            ]
+                        },
+                        {
+                            "type": "view",
+                            "style": {
+                                "align": "center"
+                            },
+                            "components": [
+                                {
+                                    "type": "text",
+                                    "text": "={{$user.total_likes || \"1.2M\"}}",
+                                    "style": {
+                                        "font-size": "18",
+                                        "font-weight": "bold"
+                                    }
+                                },
+                                {
+                                    "type": "text",
+                                    "text": "좋아요",
+                                    "style": {
+                                        "font-size": "14",
+                                        "color": "#999999"
+                                    }
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "type": "view",
+                    "style": {
+                        "flex-direction": "row",
+                        "margin-bottom": "20"
+                    },
+                    "components": [
+                        {
+                            "type": "button",
+                            "text": "={{$user.is_following == \"true\" ? \"팔로잉\" : \"팔로우\"}}",
+                            "action": "toggle-follow",
+                            "style": {
+                                "width": "150",
+                                "height": "40",
+                                "background-color": "={{$user.is_following == \"true\" ? \"#F0F0F0\" : \"#FE2C55\"}}",
+                                "color": "={{$user.is_following == \"true\" ? \"#000000\" : \"#FFFFFF\"}}",
+                                "border-radius": "4",
+                                "font-weight": "bold",
+                                "margin-right": "10"
+                            }
+                        },
+                        {
+                            "type": "button",
+                            "text": "메시지",
+                            "action": "send-message",
+                            "style": {
+                                "width": "80",
+                                "height": "40",
+                                "background-color": "#F0F0F0",
+                                "color": "#000000",
+                                "border-radius": "4",
+                                "font-weight": "bold"
+                            }
+                        }
+                    ]
+                },
+                {
+                    "type": "text",
+                    "text": "={{$user.bio || \"안녕하세요! 재미있는 영상 많이 올리겠습니다 ✨\"}}",
+                    "style": {
+                        "font-size": "14",
+                        "text-align": "center",
+                        "margin-bottom": "20"
+                    }
+                }
+            ]
+        },
+        {
+            "type": "tabs",
+            "style": {
+                "width": "1pw"
+            },
+            "items": [
+                {
+                    "text": "동영상",
+                    "type": "video-grid",
+                    "videos": "={{$user.videos}}"
+                },
+                {
+                    "text": "좋아요",
+                    "type": "video-grid",
+                    "videos": "={{$user.liked_videos}}"
+                }
+            ]
+        }
+    ]
+}
+=end
+
+=begin component: video-grid
+{
+    "type": "view",
+    "style": {
+        "width": "1pw",
+        "padding": "2"
+    },
+    "components": [
+        {
+            "type": "list",
+            "data": "$videos",
+            "columns": 3,
+            "components": [
+                {
+                    "type": "image",
+                    "url": "={{$item.thumbnail}}",
+                    "action": "play-video",
+                    "style": {
+                        "width": "=(1pw - 16) / 3",
+                        "height": "200",
+                        "margin": "2",
+                        "border-radius": "4",
+                        "content-mode": "aspect-fill"
+                    }
+                }
+            ]
+        }
+    ]
+}
+=end
+
+=begin action: toggle-follow
+if $user.is_following == "true"
+    $user.is_following = "false"
+    $user.followers = (($user.followers | number) - 1) | string
+else
+    $user.is_following = "true"
+    $user.followers = (($user.followers | number) + 1) | string
+end
+=end
+
+=begin action: send-message
+popup("message", { "user": $user })
+=end
+
+=begin action: play-video
+popup("video-player", { "video": $item })
+=end

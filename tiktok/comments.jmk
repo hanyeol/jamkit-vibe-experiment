@@ -1,0 +1,313 @@
+=begin popup
+type = "comments"
+video = $data.video
+=end
+
+=begin layout: comments
+{
+    "type": "view",
+    "style": {
+        "width": "1pw",
+        "height": "0.7ph",
+        "background-color": "#FFFFFF",
+        "border-radius-top-left": "20",
+        "border-radius-top-right": "20"
+    },
+    "components": [
+        {
+            "type": "view",
+            "style": {
+                "width": "1pw",
+                "padding": "15",
+                "border-bottom-width": "1",
+                "border-color": "#E0E0E0",
+                "align": "center"
+            },
+            "components": [
+                {
+                    "type": "view",
+                    "style": {
+                        "width": "40",
+                        "height": "4",
+                        "background-color": "#CCCCCC",
+                        "border-radius": "2",
+                        "margin-bottom": "10"
+                    }
+                },
+                {
+                    "type": "text",
+                    "text": "={{$video.comments + \" 개의 댓글\"}}",
+                    "style": {
+                        "font-size": "16",
+                        "font-weight": "bold"
+                    }
+                }
+            ]
+        },
+        {
+            "type": "scroll",
+            "style": {
+                "width": "1pw",
+                "height": "=(0.7ph - 150)",
+                "padding": "15"
+            },
+            "components": [
+                {
+                    "type": "list",
+                    "data": "$comments_data",
+                    "components": [
+                        {
+                            "type": "comment-item",
+                            "comment": "={{$item}}"
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "type": "view",
+            "style": {
+                "position": "absolute",
+                "bottom": "0",
+                "left": "0",
+                "right": "0",
+                "height": "60",
+                "background-color": "#F8F8F8",
+                "border-top-width": "1",
+                "border-color": "#E0E0E0",
+                "padding": "10",
+                "flex-direction": "row",
+                "align-items": "center"
+            },
+            "components": [
+                {
+                    "type": "image",
+                    "url": "https://i.pravatar.cc/150?img=10",
+                    "style": {
+                        "width": "40",
+                        "height": "40",
+                        "border-radius": "20",
+                        "margin-right": "10"
+                    }
+                },
+                {
+                    "type": "input",
+                    "id": "comment-input",
+                    "placeholder": "댓글을 입력하세요...",
+                    "style": {
+                        "flex": "1",
+                        "height": "40",
+                        "background-color": "#FFFFFF",
+                        "border-radius": "20",
+                        "padding-left": "15",
+                        "padding-right": "15",
+                        "margin-right": "10"
+                    }
+                },
+                {
+                    "type": "button",
+                    "text": "게시",
+                    "action": "post-comment",
+                    "style": {
+                        "width": "60",
+                        "height": "40",
+                        "background-color": "#FE2C55",
+                        "color": "#FFFFFF",
+                        "border-radius": "20",
+                        "font-weight": "bold"
+                    }
+                }
+            ]
+        }
+    ]
+}
+=end
+
+=begin component: comment-item
+{
+    "type": "view",
+    "style": {
+        "width": "1pw",
+        "padding-top": "10",
+        "padding-bottom": "10",
+        "flex-direction": "row"
+    },
+    "components": [
+        {
+            "type": "image",
+            "url": "={{$comment.avatar}}",
+            "style": {
+                "width": "40",
+                "height": "40",
+                "border-radius": "20",
+                "margin-right": "10"
+            }
+        },
+        {
+            "type": "view",
+            "style": {
+                "flex": "1"
+            },
+            "components": [
+                {
+                    "type": "text",
+                    "text": "={{$comment.username}}",
+                    "style": {
+                        "font-size": "14",
+                        "font-weight": "bold",
+                        "margin-bottom": "5"
+                    }
+                },
+                {
+                    "type": "text",
+                    "text": "={{$comment.text}}",
+                    "style": {
+                        "font-size": "14",
+                        "margin-bottom": "5"
+                    }
+                },
+                {
+                    "type": "view",
+                    "style": {
+                        "flex-direction": "row"
+                    },
+                    "components": [
+                        {
+                            "type": "text",
+                            "text": "={{$comment.time}}",
+                            "style": {
+                                "font-size": "12",
+                                "color": "#999999",
+                                "margin-right": "15"
+                            }
+                        },
+                        {
+                            "type": "text",
+                            "text": "={{$comment.likes + \" 좋아요\"}}",
+                            "style": {
+                                "font-size": "12",
+                                "color": "#999999",
+                                "margin-right": "15"
+                            }
+                        },
+                        {
+                            "type": "text",
+                            "text": "답글 달기",
+                            "action": "reply-comment",
+                            "style": {
+                                "font-size": "12",
+                                "color": "#999999",
+                                "font-weight": "bold"
+                            }
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "type": "view",
+            "action": "toggle-comment-like",
+            "style": {
+                "align": "center"
+            },
+            "components": [
+                {
+                    "type": "image",
+                    "url": "heart-icon.png",
+                    "style": {
+                        "width": "20",
+                        "height": "20",
+                        "tint-color": "={{$comment.liked == \"true\" ? \"#FE2C55\" : \"#999999\"}}"
+                    }
+                }
+            ]
+        }
+    ]
+}
+=end
+
+=begin data: comments_data
+[
+    {
+        "id": "1",
+        "username": "유저1",
+        "avatar": "https://i.pravatar.cc/150?img=11",
+        "text": "정말 멋진 영상이네요! 👍",
+        "time": "2시간 전",
+        "likes": "45",
+        "liked": "false"
+    },
+    {
+        "id": "2",
+        "username": "유저2",
+        "avatar": "https://i.pravatar.cc/150?img=12",
+        "text": "와 이거 어떻게 찍으신 거예요??",
+        "time": "1시간 전",
+        "likes": "23",
+        "liked": "false"
+    },
+    {
+        "id": "3",
+        "username": "유저3",
+        "avatar": "https://i.pravatar.cc/150?img=13",
+        "text": "대박!! 저도 한번 해보고 싶어요 ㅎㅎ",
+        "time": "30분 전",
+        "likes": "12",
+        "liked": "false"
+    },
+    {
+        "id": "4",
+        "username": "유저4",
+        "avatar": "https://i.pravatar.cc/150?img=14",
+        "text": "너무 재미있어요 😂",
+        "time": "15분 전",
+        "likes": "8",
+        "liked": "false"
+    },
+    {
+        "id": "5",
+        "username": "유저5",
+        "avatar": "https://i.pravatar.cc/150?img=15",
+        "text": "다음 영상도 기대할게요!",
+        "time": "5분 전",
+        "likes": "3",
+        "liked": "false"
+    }
+]
+=end
+
+=begin action: post-comment
+$comment_text = component-val("comment-input")
+
+if $comment_text != ""
+    $new_comment = {
+        "id": (($comments_data | length) + 1) | string,
+        "username": "나",
+        "avatar": "https://i.pravatar.cc/150?img=10",
+        "text": $comment_text,
+        "time": "방금",
+        "likes": "0",
+        "liked": "false"
+    }
+
+    $comments_data = [$new_comment] + $comments_data
+    $video.comments = (($video.comments | number) + 1) | string
+
+    component-set("comment-input", "")
+end
+=end
+
+=begin action: toggle-comment-like
+if $comment.liked == "true"
+    $comment.liked = "false"
+    $comment.likes = (($comment.likes | number) - 1) | string
+else
+    $comment.liked = "true"
+    $comment.likes = (($comment.likes | number) + 1) | string
+end
+=end
+
+=begin action: reply-comment
+component-focus("comment-input")
+component-set("comment-input", "@" + $comment.username + " ")
+=end

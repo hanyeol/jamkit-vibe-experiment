@@ -1,0 +1,313 @@
+=begin popup
+type = "video-feed"
+videos = $data
+=end
+
+=begin layout: video-feed
+{
+    "type": "pager",
+    "id": "video-pager",
+    "direction": "vertical",
+    "style": {
+        "width": "1pw",
+        "height": "1ph",
+        "background-color": "#000000"
+    },
+    "items": [
+        {
+            "type": "list",
+            "data": "$videos",
+            "components": [
+                {
+                    "type": "video-item",
+                    "video": "={{$item}}"
+                }
+            ]
+        }
+    ]
+}
+=end
+
+=begin component: video-item
+{
+    "type": "view",
+    "style": {
+        "width": "1pw",
+        "height": "1ph",
+        "background-color": "#000000"
+    },
+    "components": [
+        {
+            "type": "video",
+            "id": "video-player",
+            "url": "={{$video.video}}",
+            "autoplay": true,
+            "loop": true,
+            "style": {
+                "width": "1pw",
+                "height": "1ph",
+                "content-mode": "aspect-fill"
+            }
+        },
+        {
+            "type": "view",
+            "style": {
+                "width": "1pw",
+                "height": "1ph",
+                "position": "absolute",
+                "left": "0",
+                "top": "0"
+            },
+            "components": [
+                {
+                    "type": "side-actions",
+                    "video": "={{$video}}"
+                },
+                {
+                    "type": "bottom-info",
+                    "video": "={{$video}}"
+                }
+            ]
+        }
+    ]
+}
+=end
+
+=begin component: side-actions
+{
+    "type": "view",
+    "style": {
+        "width": "60",
+        "position": "absolute",
+        "right": "10",
+        "bottom": "150",
+        "align": "center"
+    },
+    "components": [
+        {
+            "type": "view",
+            "style": {
+                "margin-bottom": "20",
+                "align": "center"
+            },
+            "components": [
+                {
+                    "type": "image",
+                    "url": "={{$video.avatar}}",
+                    "style": {
+                        "width": "50",
+                        "height": "50",
+                        "border-radius": "25",
+                        "border-width": "2",
+                        "border-color": "#FFFFFF"
+                    }
+                },
+                {
+                    "type": "image",
+                    "url": "plus-icon.png",
+                    "style": {
+                        "width": "20",
+                        "height": "20",
+                        "position": "absolute",
+                        "bottom": "-5",
+                        "left": "15",
+                        "background-color": "#FE2C55",
+                        "border-radius": "10"
+                    }
+                }
+            ]
+        },
+        {
+            "type": "view",
+            "id": "like-button",
+            "action": "toggle-like",
+            "style": {
+                "margin-bottom": "20",
+                "align": "center"
+            },
+            "components": [
+                {
+                    "type": "image",
+                    "url": "heart-icon.png",
+                    "style": {
+                        "width": "35",
+                        "height": "35",
+                        "tint-color": "#FFFFFF"
+                    }
+                },
+                {
+                    "type": "text",
+                    "text": "={{$video.likes}}",
+                    "style": {
+                        "font-size": "12",
+                        "color": "#FFFFFF",
+                        "text-align": "center",
+                        "margin-top": "5"
+                    }
+                }
+            ]
+        },
+        {
+            "type": "view",
+            "action": "show-comments",
+            "style": {
+                "margin-bottom": "20",
+                "align": "center"
+            },
+            "components": [
+                {
+                    "type": "image",
+                    "url": "comment-icon.png",
+                    "style": {
+                        "width": "35",
+                        "height": "35",
+                        "tint-color": "#FFFFFF"
+                    }
+                },
+                {
+                    "type": "text",
+                    "text": "={{$video.comments}}",
+                    "style": {
+                        "font-size": "12",
+                        "color": "#FFFFFF",
+                        "text-align": "center",
+                        "margin-top": "5"
+                    }
+                }
+            ]
+        },
+        {
+            "type": "view",
+            "action": "share",
+            "style": {
+                "margin-bottom": "20",
+                "align": "center"
+            },
+            "components": [
+                {
+                    "type": "image",
+                    "url": "share-icon.png",
+                    "style": {
+                        "width": "35",
+                        "height": "35",
+                        "tint-color": "#FFFFFF"
+                    }
+                },
+                {
+                    "type": "text",
+                    "text": "={{$video.shares}}",
+                    "style": {
+                        "font-size": "12",
+                        "color": "#FFFFFF",
+                        "text-align": "center",
+                        "margin-top": "5"
+                    }
+                }
+            ]
+        },
+        {
+            "type": "image",
+            "url": "={{$video.avatar}}",
+            "style": {
+                "width": "40",
+                "height": "40",
+                "border-radius": "8",
+                "border-width": "1",
+                "border-color": "#FFFFFF"
+            }
+        }
+    ]
+}
+=end
+
+=begin component: bottom-info
+{
+    "type": "view",
+    "style": {
+        "position": "absolute",
+        "left": "10",
+        "right": "80",
+        "bottom": "20",
+        "padding": "10"
+    },
+    "components": [
+        {
+            "type": "text",
+            "text": "={{\"@\" + $video.username}}",
+            "style": {
+                "font-size": "16",
+                "font-weight": "bold",
+                "color": "#FFFFFF",
+                "margin-bottom": "5"
+            }
+        },
+        {
+            "type": "text",
+            "text": "={{$video.description}}",
+            "style": {
+                "font-size": "14",
+                "color": "#FFFFFF",
+                "margin-bottom": "10"
+            }
+        },
+        {
+            "type": "view",
+            "style": {
+                "flex-direction": "row",
+                "align-items": "center"
+            },
+            "components": [
+                {
+                    "type": "image",
+                    "url": "music-icon.png",
+                    "style": {
+                        "width": "16",
+                        "height": "16",
+                        "tint-color": "#FFFFFF",
+                        "margin-right": "5"
+                    }
+                },
+                {
+                    "type": "text",
+                    "text": "={{$video.music}}",
+                    "style": {
+                        "font-size": "12",
+                        "color": "#FFFFFF"
+                    }
+                }
+            ]
+        }
+    ]
+}
+=end
+
+=begin action: toggle-like
+if $video.liked == "true"
+    $video.liked = "false"
+    $video.likes = (($video.likes | number) - 1) | string
+else
+    $video.liked = "true"
+    $video.likes = (($video.likes | number) + 1) | string
+
+    show-animation("heart-burst")
+end
+=end
+
+=begin action: show-comments
+popup("comments", { "video": $video })
+=end
+
+=begin action: share
+share({
+    "text": "Check out this video by @" + $video.username,
+    "url": "https://tiktok.example.com/video/" + $video.id
+})
+=end
+
+=begin animation: heart-burst
+{
+    "type": "scale-fade",
+    "duration": 0.6,
+    "scale": 1.5
+}
+=end
