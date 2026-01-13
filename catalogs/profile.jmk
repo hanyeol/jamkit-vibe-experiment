@@ -1,0 +1,165 @@
+catalog {
+    title = "프로필"
+
+    body {
+        type = "list"
+        style = profile-container
+
+        header {
+            view {
+                style = profile-header
+
+                // 프로필 이미지
+                image {
+                    style = profile-avatar
+                    url = "https://i.pravatar.cc/150?img=50"
+                }
+
+                // 사용자 이름
+                text {
+                    style = profile-username
+                    text = "@myusername"
+                }
+
+                // 팔로워 정보
+                view {
+                    style = stats-container
+
+                    view {
+                        style = stat-item
+                        text {
+                            style = stat-number
+                            text = "125"
+                        }
+                        text {
+                            style = stat-label
+                            text = "팔로잉"
+                        }
+                    }
+
+                    view {
+                        style = stat-item
+                        text {
+                            style = stat-number
+                            text = "1.2M"
+                        }
+                        text {
+                            style = stat-label
+                            text = "팔로워"
+                        }
+                    }
+
+                    view {
+                        style = stat-item
+                        text {
+                            style = stat-number
+                            text = "8.5M"
+                        }
+                        text {
+                            style = stat-label
+                            text = "좋아요"
+                        }
+                    }
+                }
+
+                // 프로필 수정 버튼
+                button {
+                    style = edit-profile-button
+                    text = "프로필 수정"
+                }
+            }
+        }
+
+        sections = [
+            {
+                title = "내 동영상"
+                items = [
+                    $map(my_videos, {
+                        type = "grid-video-item"
+                        video_url = $item.video_url
+                        thumbnail = $item.thumbnail
+                        views = $item.views
+                    })
+                ]
+            }
+        ]
+    }
+
+    data {
+        my_videos = [
+            {
+                video_url = "https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/BigBuckBunny.mp4"
+                thumbnail = "https://picsum.photos/200/300?random=1"
+                views = "125K"
+            },
+            {
+                video_url = "https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ElephantsDream.mp4"
+                thumbnail = "https://picsum.photos/200/300?random=2"
+                views = "89K"
+            },
+            {
+                video_url = "https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ForBiggerBlazes.mp4"
+                thumbnail = "https://picsum.photos/200/300?random=3"
+                views = "234K"
+            }
+        ]
+    }
+
+    style {
+        profile-container {
+            background-color = #000000
+        }
+
+        profile-header {
+            width = 1pw
+            padding = 20
+            align = center
+            background-color = #000000
+        }
+
+        profile-avatar {
+            width = 100
+            height = 100
+            corner-radius = 50
+            margin = "0,0,15,0"
+        }
+
+        profile-username {
+            color = white
+            font-size = 20
+            font-weight = bold
+            margin = "0,0,20,0"
+        }
+
+        stats-container {
+            width = 1pw
+            margin = "0,0,20,0"
+        }
+
+        stat-item {
+            width = 1uw
+            align = center
+        }
+
+        stat-number {
+            color = white
+            font-size = 18
+            font-weight = bold
+        }
+
+        stat-label {
+            color = #999999
+            font-size = 14
+        }
+
+        edit-profile-button {
+            width = 1pw
+            height = 45
+            background-color = #333333
+            color = white
+            font-size = 16
+            font-weight = bold
+            corner-radius = 5
+        }
+    }
+}

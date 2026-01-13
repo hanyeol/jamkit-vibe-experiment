@@ -1,0 +1,90 @@
+catalog {
+    title = "피드"
+
+    // 틱톡 스타일의 세로 스크롤 비디오 피드
+    body {
+        type = "scrolling"
+        direction = "vertical"
+        paging = "yes"
+        scroll-indicator = "no"
+
+        sections = [
+            {
+                items = [
+                    $map(videos, {
+                        type = "video-feed-item"
+                        id = $item.id
+                        video_url = $item.video_url
+                        author = $item.author
+                        description = $item.description
+                        likes = $item.likes
+                        comments = $item.comments
+                        shares = $item.shares
+                        author_avatar = $item.author_avatar
+                        music = $item.music
+                    })
+                ]
+            }
+        ]
+    }
+
+    // 샘플 비디오 데이터
+    data {
+        videos = [
+            {
+                id = "1"
+                video_url = "https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/BigBuckBunny.mp4"
+                author = "@creator1"
+                description = "멋진 비디오 #첫번째 #틱톡클론"
+                likes = "1.2M"
+                comments = "8.5K"
+                shares = "2.1K"
+                author_avatar = "https://i.pravatar.cc/150?img=1"
+                music = "Original Sound - Creator 1"
+            },
+            {
+                id = "2"
+                video_url = "https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ElephantsDream.mp4"
+                author = "@creator2"
+                description = "재미있는 순간 🎉 #두번째"
+                likes = "850K"
+                comments = "5.2K"
+                shares = "1.8K"
+                author_avatar = "https://i.pravatar.cc/150?img=2"
+                music = "Trending Sound - Creator 2"
+            },
+            {
+                id = "3"
+                video_url = "https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ForBiggerBlazes.mp4"
+                author = "@creator3"
+                description = "놀라운 영상 ✨"
+                likes = "2.5M"
+                comments = "12K"
+                shares = "3.5K"
+                author_avatar = "https://i.pravatar.cc/150?img=3"
+                music = "Popular Sound - Creator 3"
+            }
+        ]
+    }
+
+    // 하단 탭 바
+    tabbar {
+        items = [
+            {
+                title = "홈"
+                icon = "house.fill"
+                catalog = "main"
+            },
+            {
+                title = "탐색"
+                icon = "magnifyingglass"
+                catalog = "search"
+            },
+            {
+                title = "프로필"
+                icon = "person.fill"
+                catalog = "profile"
+            }
+        ]
+    }
+}

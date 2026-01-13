@@ -1,0 +1,206 @@
+component {
+    // 전체 화면 비디오 아이템
+    view {
+        style = video-container
+
+        // 백그라운드 비디오
+        video {
+            id = "video-player"
+            style = video-player
+            url = $parameters.video_url
+            autoplay = "yes"
+            loop = "yes"
+            muted = "no"
+            controls = "no"
+        }
+
+        // 오른쪽 상호작용 버튼들
+        view {
+            style = interaction-panel
+
+            view {
+                style = interaction-button-container
+
+                // 프로필 이미지
+                image {
+                    style = author-avatar
+                    url = $parameters.author_avatar
+                    action = $popup("profile", $parameters.author)
+                }
+
+                // 좋아요 버튼
+                view {
+                    style = action-button
+
+                    image {
+                        style = action-icon
+                        url = "icon://heart.fill"
+                        tint = "white"
+                    }
+
+                    text {
+                        style = action-count
+                        text = $parameters.likes
+                    }
+                }
+
+                // 댓글 버튼
+                view {
+                    style = action-button
+
+                    image {
+                        style = action-icon
+                        url = "icon://message.fill"
+                        tint = "white"
+                    }
+
+                    text {
+                        style = action-count
+                        text = $parameters.comments
+                    }
+                }
+
+                // 공유 버튼
+                view {
+                    style = action-button
+
+                    image {
+                        style = action-icon
+                        url = "icon://arrowshape.turn.up.right.fill"
+                        tint = "white"
+                    }
+
+                    text {
+                        style = action-count
+                        text = $parameters.shares
+                    }
+                }
+            }
+        }
+
+        // 하단 정보 패널
+        view {
+            style = info-panel
+
+            // 작성자 이름
+            text {
+                style = author-name
+                text = $parameters.author
+            }
+
+            // 설명
+            text {
+                style = description
+                text = $parameters.description
+            }
+
+            // 음악 정보
+            view {
+                style = music-info
+
+                image {
+                    style = music-icon
+                    url = "icon://music.note"
+                    tint = "white"
+                }
+
+                text {
+                    style = music-text
+                    text = $parameters.music
+                }
+            }
+        }
+    }
+
+    style {
+        video-container {
+            width = 1pw
+            height = 1ph
+            background-color = black
+        }
+
+        video-player {
+            width = 1pw
+            height = 1ph
+        }
+
+        interaction-panel {
+            position = absolute
+            right = 10
+            bottom = 100
+            width = 60
+        }
+
+        interaction-button-container {
+            width = 1pw
+            padding = "10,0,10,0"
+        }
+
+        author-avatar {
+            width = 50
+            height = 50
+            corner-radius = 25
+            margin = "0,0,20,0"
+            border-width = 2
+            border-color = white
+        }
+
+        action-button {
+            width = 1pw
+            align = center
+            margin = "0,0,25,0"
+        }
+
+        action-icon {
+            width = 35
+            height = 35
+        }
+
+        action-count {
+            width = 1pw
+            align = center
+            text-align = center
+            color = white
+            font-size = 12
+            font-weight = bold
+            margin = "5,0,0,0"
+        }
+
+        info-panel {
+            position = absolute
+            left = 10
+            right = 80
+            bottom = 100
+        }
+
+        author-name {
+            color = white
+            font-size = 16
+            font-weight = bold
+            margin = "0,0,5,0"
+        }
+
+        description {
+            color = white
+            font-size = 14
+            margin = "0,0,10,0"
+            line-break-mode = word-wrap
+        }
+
+        music-info {
+            width = 1pw
+        }
+
+        music-icon {
+            width = 15
+            height = 15
+            margin = "0,5,0,0"
+        }
+
+        music-text {
+            color = white
+            font-size = 12
+            margin = "0,0,0,5"
+        }
+    }
+}

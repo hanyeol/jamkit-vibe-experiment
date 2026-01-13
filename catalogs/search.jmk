@@ -1,0 +1,117 @@
+catalog {
+    title = "탐색"
+
+    body {
+        type = "list"
+        style = search-container
+
+        header {
+            view {
+                style = search-header
+
+                textfield {
+                    id = "search-input"
+                    style = search-field
+                    placeholder = "트렌드, 해시태그, 크리에이터 검색"
+                    keyboard = "default"
+
+                    action = $load("search", {
+                        query = $value
+                    })
+                }
+            }
+        }
+
+        sections = [
+            {
+                title = "🔥 인기 해시태그"
+                items = [
+                    $map(trending_tags, {
+                        type = "hashtag-item"
+                        tag = $item.tag
+                        views = $item.views
+                    })
+                ]
+            },
+            {
+                title = "🎬 추천 크리에이터"
+                items = [
+                    $map(featured_creators, {
+                        type = "creator-item"
+                        name = $item.name
+                        username = $item.username
+                        avatar = $item.avatar
+                        followers = $item.followers
+                    })
+                ]
+            }
+        ]
+    }
+
+    data {
+        trending_tags = [
+            {
+                tag = "#댄스챌린지"
+                views = "12.5B"
+            },
+            {
+                tag = "#요리레시피"
+                views = "8.3B"
+            },
+            {
+                tag = "#운동루틴"
+                views = "5.7B"
+            },
+            {
+                tag = "#반려동물"
+                views = "9.2B"
+            },
+            {
+                tag = "#데일리룩"
+                views = "6.8B"
+            }
+        ]
+
+        featured_creators = [
+            {
+                name = "크리에이터 1"
+                username = "@creator1"
+                avatar = "https://i.pravatar.cc/150?img=11"
+                followers = "2.5M"
+            },
+            {
+                name = "크리에이터 2"
+                username = "@creator2"
+                avatar = "https://i.pravatar.cc/150?img=12"
+                followers = "1.8M"
+            },
+            {
+                name = "크리에이터 3"
+                username = "@creator3"
+                avatar = "https://i.pravatar.cc/150?img=13"
+                followers = "3.2M"
+            }
+        ]
+    }
+
+    style {
+        search-container {
+            background-color = #000000
+        }
+
+        search-header {
+            width = 1pw
+            padding = 15
+            background-color = #1a1a1a
+        }
+
+        search-field {
+            width = 1pw
+            height = 45
+            padding = "0,15,0,15"
+            background-color = #2a2a2a
+            color = white
+            corner-radius = 10
+        }
+    }
+}

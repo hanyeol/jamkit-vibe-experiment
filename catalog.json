@@ -1,0 +1,31 @@
+{
+    "type": "catalog",
+    "version": "1.0",
+    "title": "TikTok Clone",
+    "server": {
+        "base-url": "https://api.example.com"
+    },
+    "schemes": [
+        {
+            "scheme": "tiktok://",
+            "action": {
+                "type": "load",
+                "catalog": "main"
+            }
+        }
+    ],
+    "pages": [
+        {
+            "name": "main",
+            "path": "catalogs/main.jmk"
+        },
+        {
+            "name": "search",
+            "path": "catalogs/search.jmk"
+        },
+        {
+            "name": "profile",
+            "path": "catalogs/profile.jmk"
+        }
+    ]
+}

@@ -1,0 +1,56 @@
+component {
+    view {
+        style = hashtag-container
+
+        view {
+            style = hashtag-content
+
+            text {
+                style = hashtag-tag
+                text = $parameters.tag
+            }
+
+            text {
+                style = hashtag-views
+                text = $concat($parameters.views, " 조회수")
+            }
+        }
+
+        image {
+            style = hashtag-arrow
+            url = "icon://chevron.right"
+            tint = "#666666"
+        }
+    }
+
+    style {
+        hashtag-container {
+            width = 1pw
+            height = 70
+            padding = "15,20,15,20"
+            background-color = #1a1a1a
+            margin = "0,0,1,0"
+        }
+
+        hashtag-content {
+            width = 1uw
+        }
+
+        hashtag-tag {
+            color = white
+            font-size = 16
+            font-weight = bold
+            margin = "0,0,5,0"
+        }
+
+        hashtag-views {
+            color = #999999
+            font-size = 13
+        }
+
+        hashtag-arrow {
+            width = 20
+            height = 20
+        }
+    }
+}

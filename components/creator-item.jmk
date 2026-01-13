@@ -1,0 +1,82 @@
+component {
+    view {
+        style = creator-container
+
+        image {
+            style = creator-avatar
+            url = $parameters.avatar
+        }
+
+        view {
+            style = creator-info
+
+            text {
+                style = creator-name
+                text = $parameters.name
+            }
+
+            text {
+                style = creator-username
+                text = $parameters.username
+            }
+
+            text {
+                style = creator-followers
+                text = $concat($parameters.followers, " 팔로워")
+            }
+        }
+
+        button {
+            style = follow-button
+            text = "팔로우"
+        }
+    }
+
+    style {
+        creator-container {
+            width = 1pw
+            height = 90
+            padding = 15
+            background-color = #1a1a1a
+            margin = "0,0,1,0"
+        }
+
+        creator-avatar {
+            width = 60
+            height = 60
+            corner-radius = 30
+            margin = "0,15,0,0"
+        }
+
+        creator-info {
+            width = 1uw
+        }
+
+        creator-name {
+            color = white
+            font-size = 16
+            font-weight = bold
+        }
+
+        creator-username {
+            color = #999999
+            font-size = 14
+            margin = "3,0,3,0"
+        }
+
+        creator-followers {
+            color = #666666
+            font-size = 13
+        }
+
+        follow-button {
+            width = 80
+            height = 35
+            background-color = #fe2c55
+            color = white
+            font-size = 14
+            font-weight = bold
+            corner-radius = 5
+        }
+    }
+}
