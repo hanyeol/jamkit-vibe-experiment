@@ -1,0 +1,9 @@
+{
+    id: com.mycompany.tiktok,
+    language: en,
+    version: 1.0,
+    title: "TikTok Clone",
+    title-ko: "틱톡 클론",
+    description: "A short-form video sharing app inspired by TikTok",
+    description-ko: "틱톡에서 영감을 받은 숏폼 비디오 공유 앱"
+}

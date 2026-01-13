@@ -1,0 +1,119 @@
+=begin page
+width=1
+height=1
+background-color=#000000
+=end
+
+=begin video-item
+width=1
+height=1
+=end
+
+=begin video-player
+width=1
+height=1
+background-color=#000000
+content-mode=scale-aspect-fill
+=end
+
+=begin overlay
+position=absolute
+width=1
+height=1
+=end
+
+=begin profile-button
+position=absolute
+right=20
+bottom=300
+width=50
+height=50
+border-radius=25
+border-width=2
+border-color=#FFFFFF
+=end
+
+=begin profile-avatar
+width=1
+height=1
+border-radius=25
+content-mode=scale-aspect-fill
+=end
+
+=begin action-buttons
+position=absolute
+right=20
+bottom=120
+width=60
+=end
+
+=begin like-button, =begin comment-button, =begin share-button
+width=60
+height=80
+orientation=vertical
+margin-bottom=20
+=end
+
+=begin like-icon, =begin comment-icon, =begin share-icon
+width=35
+height=35
+tint-color=#FFFFFF
+content-mode=scale-aspect-fit
+=end
+
+=begin like-count, =begin comment-count, =begin share-count
+width=1
+text-align=center
+font-family=SFProText-Semibold
+font-size=12
+text-color=#FFFFFF
+margin-top=5
+=end
+
+=begin info-section
+position=absolute
+left=20
+right=90
+bottom=120
+=end
+
+=begin author-name
+width=1
+font-family=SFProText-Bold
+font-size=16
+text-color=#FFFFFF
+margin-bottom=8
+=end
+
+=begin caption
+width=1
+font-family=SFProText-Regular
+font-size=14
+text-color=#FFFFFF
+line-break-mode=word-wrap
+=end
+
+=begin bottom-nav
+position=absolute
+bottom=0
+width=1
+height=60
+background-color=#000000
+border-top-width=1
+border-color=#333333
+=end
+
+=begin nav-buttons
+width=1
+height=1
+orientation=horizontal
+=end
+
+=begin home-button, =begin discover-button, =begin profile-button
+width=1pw
+height=1
+text-align=center
+font-family=SFProText-Regular
+font-size=12
+text-color=#FFFFFF
+=end

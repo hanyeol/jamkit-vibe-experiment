@@ -1,0 +1,59 @@
+{
+    "title": "TikTok Clone",
+    "version": "1.0",
+    "default-subview": "V_VIDEO_FEED",
+    "subviews": {
+    	"V_VIDEO_FEED": {
+    		"catalog": "MainApp",
+    		"subcatalog": "video-feed",
+    		"type": "store"
+    	},
+    	"V_DISCOVER": {
+    		"catalog": "MainApp",
+    		"subcatalog": "discover",
+    		"type": "store"
+    	},
+    	"V_PROFILE": {
+    		"catalog": "MainApp",
+    		"subcatalog": "profile",
+    		"type": "store"
+    	}
+	},
+	"subcatalogs": {
+		"video-feed": {
+    		"controller": "StoreView",
+	    	"hides-navibar": "yes",
+    		"statusbar-style": "light-content",
+    		"title": "Video Feed",
+			"title-ko": "비디오 피드"
+		},
+		"discover": {
+    		"controller": "StoreView",
+	    	"hides-navibar": "no",
+    		"statusbar-style": "Default",
+    		"title": "Discover",
+			"title-ko": "탐색"
+		},
+		"profile": {
+    		"controller": "StoreView",
+	    	"hides-navibar": "no",
+    		"statusbar-style": "Default",
+    		"title": "Profile",
+			"title-ko": "프로필"
+		}
+	},
+	"strings": {
+		"Info": {
+			"ko": "정보"
+		},
+		"Like": {
+			"ko": "좋아요"
+		},
+		"Comment": {
+			"ko": "댓글"
+		},
+		"Share": {
+			"ko": "공유"
+		}
+	}
+}

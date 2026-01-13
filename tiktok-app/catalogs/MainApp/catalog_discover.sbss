@@ -1,0 +1,80 @@
+=begin page
+width=1
+height=1
+background-color=#FFFFFF
+=end
+
+=begin search-bar
+width=1
+height=60
+padding=10
+background-color=#F5F5F5
+=end
+
+=begin search-input
+width=1
+height=40
+border-radius=20
+background-color=#FFFFFF
+padding-left=20
+padding-right=20
+font-size=14
+=end
+
+=begin trending-section
+width=1
+padding=20
+=end
+
+=begin section-title
+width=1
+font-family=SFProText-Bold
+font-size=20
+text-color=#000000
+margin-bottom=15
+=end
+
+=begin trending-list
+width=1
+grid-columns=2
+grid-column-gap=10
+grid-row-gap=10
+=end
+
+=begin trending-item
+width=1
+height=250
+border-radius=10
+overflow=hidden
+=end
+
+=begin thumbnail
+width=1
+height=1
+content-mode=scale-aspect-fill
+=end
+
+=begin overlay
+position=absolute
+width=1
+height=1
+background-color=#00000066
+=end
+
+=begin hashtag
+position=absolute
+left=10
+bottom=40
+font-family=SFProText-Bold
+font-size=18
+text-color=#FFFFFF
+=end
+
+=begin views
+position=absolute
+left=10
+bottom=15
+font-family=SFProText-Regular
+font-size=12
+text-color=#FFFFFF
+=end

@@ -1,0 +1,67 @@
+=begin catalog
+=object page: catalog
+
+=begin script
+function $load-trending() {
+    return [
+        {
+            "hashtag": "#dance",
+            "views": "1.2B",
+            "thumbnail": "https://picsum.photos/400/600?random=10"
+        },
+        {
+            "hashtag": "#comedy",
+            "views": "890M",
+            "thumbnail": "https://picsum.photos/400/600?random=11"
+        },
+        {
+            "hashtag": "#cooking",
+            "views": "650M",
+            "thumbnail": "https://picsum.photos/400/600?random=12"
+        },
+        {
+            "hashtag": "#travel",
+            "views": "520M",
+            "thumbnail": "https://picsum.photos/400/600?random=13"
+        },
+        {
+            "hashtag": "#music",
+            "views": "980M",
+            "thumbnail": "https://picsum.photos/400/600?random=14"
+        },
+        {
+            "hashtag": "#art",
+            "views": "420M",
+            "thumbnail": "https://picsum.photos/400/600?random=15"
+        }
+    ];
+}
+=end script
+
+=begin search-bar
+=object search-input: textfield, placeholder=Search videos, hashtags...
+=end search-bar
+
+=begin trending-section
+=object section-title: label, text=Trending Now
+
+=begin section: trending-list
+=begin data
+$load-trending()
+=end data
+
+=begin row
+=begin cell
+=begin trending-item
+=object thumbnail: image, image=$data.thumbnail
+=begin overlay
+=object hashtag: label, text=$data.hashtag
+=object views: label, text=$data.views
+=end overlay
+=end trending-item
+=end cell
+=end row
+=end section
+=end trending-section
+
+=end catalog

@@ -1,0 +1,104 @@
+=begin catalog
+=object page: catalog
+
+=begin script
+function $load-user-info() {
+    return {
+        "username": "@myusername",
+        "avatar": "https://i.pravatar.cc/200?img=5",
+        "followers": "1.2M",
+        "following": "345",
+        "likes": "5.8M",
+        "bio": "Content creator 🎥 | Dancer 💃 | Food lover 🍕"
+    };
+}
+
+function $load-user-videos() {
+    return [
+        {
+            "id": "v1",
+            "thumbnail": "https://picsum.photos/400/600?random=20",
+            "views": "1.2M"
+        },
+        {
+            "id": "v2",
+            "thumbnail": "https://picsum.photos/400/600?random=21",
+            "views": "890K"
+        },
+        {
+            "id": "v3",
+            "thumbnail": "https://picsum.photos/400/600?random=22",
+            "views": "2.3M"
+        },
+        {
+            "id": "v4",
+            "thumbnail": "https://picsum.photos/400/600?random=23",
+            "views": "456K"
+        },
+        {
+            "id": "v5",
+            "thumbnail": "https://picsum.photos/400/600?random=24",
+            "views": "1.8M"
+        },
+        {
+            "id": "v6",
+            "thumbnail": "https://picsum.photos/400/600?random=25",
+            "views": "3.2M"
+        }
+    ];
+}
+=end script
+
+=begin profile-header
+=object avatar: image, image=$load-user-info().avatar
+=object username: label, text=$load-user-info().username
+=object bio: label, text=$load-user-info().bio
+
+=begin stats
+=begin followers-stat
+=object followers-count: label, text=$load-user-info().followers
+=object followers-label: label, text=Followers
+=end followers-stat
+
+=begin following-stat
+=object following-count: label, text=$load-user-info().following
+=object following-label: label, text=Following
+=end following-stat
+
+=begin likes-stat
+=object likes-count: label, text=$load-user-info().likes
+=object likes-label: label, text=Likes
+=end likes-stat
+=end stats
+
+=begin action-buttons
+=object edit-profile-btn: button, label=Edit Profile
+=object settings-btn: button, label=Settings
+=end action-buttons
+=end profile-header
+
+=begin tabs
+=object videos-tab: button, label=Videos
+=object liked-tab: button, label=Liked
+=end tabs
+
+=begin video-grid
+=begin section: user-videos
+=begin data
+$load-user-videos()
+=end data
+
+=begin row
+=begin cell
+=begin video-item
+=object video-thumb: image, image=$data.thumbnail
+=begin view-overlay
+=object view-count: label, text=$data.views
+=end view-overlay
+=end video-item
+=end cell
+=end row
+=end section
+=end video-grid
+
+=end catalog
