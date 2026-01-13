@@ -1,0 +1,95 @@
+=begin catalog
+
+=begin scroll: id=video-feed, style=video_feed_container, orientation=vertical, paging=yes, \
+    page-control=no, scrollbar=no
+
+    =begin section: id=video1, tag=video, data-video="https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/BigBuckBunny.mp4"
+        =object video-view: style=video_player, src=$data-video, repeat=yes, autoplay=yes
+
+        =begin section: style=overlay_controls
+            =begin section: style=right_controls
+                =begin section: style=button_with_count
+                    =object label: text="👤", style=icon_label
+                =end section
+                =begin section: style=button_with_count
+                    =object label: text="❤️", style=icon_label
+                    =object label: text="1.2M", style=count_label
+                =end section
+                =begin section: style=button_with_count
+                    =object label: text="💬", style=icon_label
+                    =object label: text="8.5K", style=count_label
+                =end section
+                =begin section: style=button_with_count
+                    =object label: text="🔗", style=icon_label
+                    =object label: text="Share", style=count_label
+                =end section
+            =end section
+
+            =begin section: style=bottom_info
+                =object label: text="@username", style=username_label
+                =object label: text="Amazing video description! #tiktok #viral", style=description_label
+            =end section
+        =end section
+    =end section
+
+    =begin section: id=video2, tag=video, data-video="https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ElephantsDream.mp4"
+        =object video-view: style=video_player, src=$data-video, repeat=yes, autoplay=yes
+
+        =begin section: style=overlay_controls
+            =begin section: style=right_controls
+                =begin section: style=button_with_count
+                    =object label: text="👤", style=icon_label
+                =end section
+                =begin section: style=button_with_count
+                    =object label: text="❤️", style=icon_label
+                    =object label: text="856K", style=count_label
+                =end section
+                =begin section: style=button_with_count
+                    =object label: text="💬", style=icon_label
+                    =object label: text="3.2K", style=count_label
+                =end section
+                =begin section: style=button_with_count
+                    =object label: text="🔗", style=icon_label
+                    =object label: text="Share", style=count_label
+                =end section
+            =end section
+
+            =begin section: style=bottom_info
+                =object label: text="@creator2", style=username_label
+                =object label: text="Check out this cool animation! #creative #art", style=description_label
+            =end section
+        =end section
+    =end section
+
+    =begin section: id=video3, tag=video, data-video="https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ForBiggerBlazes.mp4"
+        =object video-view: style=video_player, src=$data-video, repeat=yes, autoplay=yes
+
+        =begin section: style=overlay_controls
+            =begin section: style=right_controls
+                =begin section: style=button_with_count
+                    =object label: text="👤", style=icon_label
+                =end section
+                =begin section: style=button_with_count
+                    =object label: text="❤️", style=icon_label
+                    =object label: text="2.3M", style=count_label
+                =end section
+                =begin section: style=button_with_count
+                    =object label: text="💬", style=icon_label
+                    =object label: text="12K", style=count_label
+                =end section
+                =begin section: style=button_with_count
+                    =object label: text="🔗", style=icon_label
+                    =object label: text="Share", style=count_label
+                =end section
+            =end section
+
+            =begin section: style=bottom_info
+                =object label: text="@videomaker", style=username_label
+                =object label: text="Epic content here! Follow for more #trending", style=description_label
+            =end section
+        =end section
+    =end section
+
+=end scroll
+
+=end catalog

@@ -1,0 +1,85 @@
+import themes.sbss
+
+$BG_COLOR = #000000
+$TEXT_COLOR = #ffffff
+$BUTTON_SIZE = 50dp
+$ICON_SIZE = 35dp
+
+#video_feed_container {
+    width: 1pw;
+    height: 1ph;
+    position: absolute;
+    background-color: $BG_COLOR;
+}
+
+#video_player {
+    width: 1pw;
+    height: 1ph;
+    gravity: center;
+    content-mode: aspect-fill;
+}
+
+#overlay_controls {
+    width: 1pw;
+    height: 1ph;
+    position: absolute;
+}
+
+#right_controls {
+    position: absolute;
+    width: 60dp;
+    right: 10dp;
+    bottom: 120dp;
+    orientation: vertical;
+    spacing: 20dp;
+}
+
+#button_with_count {
+    orientation: vertical;
+    spacing: 5dp;
+    gravity: center;
+}
+
+#icon_label {
+    font-size: 2em;
+    text-color: $TEXT_COLOR;
+    text-align: center;
+}
+
+#count_label {
+    font-size: 0.8em;
+    text-color: $TEXT_COLOR;
+    text-align: center;
+    font-weight: bold;
+}
+
+#bottom_info {
+    position: absolute;
+    width: 1pw - 80dp;
+    left: 10dp;
+    bottom: 20dp;
+    orientation: vertical;
+    spacing: 8dp;
+}
+
+#username_label {
+    text-color: $TEXT_COLOR;
+    font-size: 1.2em;
+    font-weight: bold;
+}
+
+#description_label {
+    text-color: $TEXT_COLOR;
+    font-size: 1em;
+    line-limit: 2;
+}
+
+%video {
+    width: 1pw;
+    height: 1ph;
+}
+
+/catalog {
+    fits-to-page: yes;
+    background-color: $BG_COLOR;
+}
